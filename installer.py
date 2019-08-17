@@ -77,7 +77,7 @@ elif ops==4:
 	os.system("sudo apt-get install ncat > /dev/null") 
 	path=os.getcwd()
 	with open("frlinuxploit.sh","w+") as fr:
-	      fr.write(f"python3 {path}/frlinuxploit.py.py")
+	      fr.write(f"python3 {path}/frlinuxploit.py")
 	os.system(f"cp {path}/frlinuxploit.sh //data/data/com.termux/files/usr/bin/frlinuxploit")
 	os.system("chmod +x //data/data/com.termux/files/usr/bin/frlinuxploit")
 	print("")
