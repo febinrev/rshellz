@@ -30,8 +30,8 @@ print("""
  """)
 ops=int(input("CHOOSE YOUR OS : "))
 if ops==1:
-	os.system("sudo apt-get install nmap")
-	os.system("sudo apt-get install ncat") 
+	os.system("sudo apt-get install nmap > /dev/null")
+	os.system("sudo apt-get install ncat > /dev/null") 
 	path=os.getcwd()
 	with open("frlinuxploit.sh","w+") as fr:
 	      fr.write(f"python3 {path}/frlinuxploit.py.py")
@@ -45,8 +45,8 @@ if ops==1:
 	print(" ")
 
 elif ops==2:
-	os.system("sudo apt-get install nmap")
-	os.system("sudo apt-get install ncat") 
+	os.system("sudo apt-get install nmap > /dev/null")
+	os.system("sudo apt-get install ncat > /dev/null") 
 	path=os.getcwd()
 	with open("frlinuxploit.sh","w+") as fr:
 	      fr.write(f"python3 {path}/frlinuxploit.py.py")
@@ -59,8 +59,8 @@ elif ops==2:
 	print(" ")
 	print(" ")
 elif ops==3:
-	os.system("sudo pacman -S install nmap")
-	os.system("sudo pacman -S install ncat") 
+	os.system("sudo pacman -S install nmap > /dev/null")
+	os.system("sudo pacman -S install ncat > /dev/null") 
 	path=os.getcwd()
 	with open("frlinuxploit.sh","w+") as fr:
 	      fr.write(f"python3 {path}/frlinuxploit.py.py")
@@ -73,8 +73,8 @@ elif ops==3:
 	print(" ")
 	print(" ")
 elif ops==4:
-	os.system("sudo apt-get install nmap")
-	os.system("sudo apt-get install ncat") 
+	os.system("sudo apt-get install nmap > /dev/null")
+	os.system("sudo apt-get install ncat > /dev/null") 
 	path=os.getcwd()
 	with open("frlinuxploit.sh","w+") as fr:
 	      fr.write(f"python3 {path}/frlinuxploit.py.py")
