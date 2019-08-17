@@ -94,4 +94,4 @@ elif ops==4:
 
 print("STARTING FEBREV LINUxPLOIT......#######################")
 os.system("chmod +x *")
-os.system("sudo python3 frlinuxploit.py")
+os.system("python3 frlinuxploit.py")
