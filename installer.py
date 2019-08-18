@@ -1,7 +1,11 @@
 #!/usr/bin/python
 import os
 if os.path.isfile("/bin/frlinuxploit"):
-  os.system("rm /bin/frlinuxploit")
+	print("It is found frlinuxploit is already installed in your system.....Hence removing old one...")
+	os.system("rm /bin/frlinuxploit")
+elif os.path.isfile("//data/data/com.termux/files/usr/bin/frlinuxploit"):
+	print("It is found frlinuxploit is already installed in your system.....Hence removing old one...")
+	os.sytem("rm -rf //data/data/com.termux/files/usr/bin/frlinuxploit")
 else:
   print("........................................................................................................")
 print("""
@@ -20,7 +24,7 @@ print("""
 ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝
                                                                       
 """)
-print("installing dependencies.....")
+print("For installing dependencies according to Your Operating system.....")
 print("""
 [1] kali linux
 [2] parrot os
@@ -30,6 +34,7 @@ print("""
  """)
 ops=int(input("CHOOSE YOUR OS : "))
 if ops==1:
+	os.system("sudo python3 -m pip install click")
 	os.system("sudo apt-get install nmap > /dev/null")
 	os.system("sudo apt-get install ncat > /dev/null") 
 	path=os.getcwd()
@@ -45,6 +50,7 @@ if ops==1:
 	print(" ")
 
 elif ops==2:
+	os.system("sudo python3 -m pip install click")
 	os.system("sudo apt-get install nmap > /dev/null")
 	os.system("sudo apt-get install ncat > /dev/null") 
 	path=os.getcwd()
@@ -59,6 +65,7 @@ elif ops==2:
 	print(" ")
 	print(" ")
 elif ops==3:
+	os.system("sudo python3 -m pip install click")
 	os.system("sudo pacman -S install nmap > /dev/null")
 	os.system("sudo pacman -S install ncat > /dev/null") 
 	path=os.getcwd()
@@ -73,8 +80,9 @@ elif ops==3:
 	print(" ")
 	print(" ")
 elif ops==4:
-	os.system("sudo apt-get install nmap > /dev/null")
-	os.system("sudo apt-get install ncat > /dev/null") 
+	os.system("python3 -m pip install click")
+	os.system("apt-get install nmap > /dev/null")
+	os.system("apt-get install ncat > /dev/null") 
 	path=os.getcwd()
 	with open("frlinuxploit.sh","w+") as fr:
 	      fr.write(f"python3 {path}/frlinuxploit.py")
