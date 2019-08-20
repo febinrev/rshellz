@@ -49,7 +49,7 @@ print("""Available payload modules>>>
 
 Advanced payload modules>>>>
 
-[11] linux_debian/fake_downloading_reverse_tcp
+[11] linux_debian/fake_downloading/reverse_tcp
 [12] linux_arch/fake_downloading/reverse_tcp
 [13] linux_termux/fake_downloading/reverse_tcp
 [14] linux_debian/fake_program/reverse_tcp
