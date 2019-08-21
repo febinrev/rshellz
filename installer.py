@@ -5,7 +5,7 @@ if os.path.isfile("/bin/frlinuxploit"):
 	os.system("rm /bin/frlinuxploit")
 elif os.path.isfile("//data/data/com.termux/files/usr/bin/frlinuxploit"):
 	print("It is found frlinuxploit is already installed in your system.....Hence removing old one...")
-	os.sytem("rm -rf //data/data/com.termux/files/usr/bin/frlinuxploit")
+	os.system("rm -rf //data/data/com.termux/files/usr/bin/frlinuxploit")
 else:
   print("........................................................................................................")
 print(""" 
