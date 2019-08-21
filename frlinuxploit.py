@@ -19,7 +19,7 @@ OPEN ANOTHER SESSION/TERMINAL AND RUN THE PORTFORWARDING MODULE >>>> python3 por
 AND ENTER THE SAME PORT ENTERED IN THE LPORT......lport must be above 1024....
 
 """)
-print("\033[0;39m ")
+print("\033[1;34m ")
 
 lhost=click.prompt("frsf(lhost)#> ", type=str, default=socket.gethostbyname(socket.gethostname()))
 print("LHOST ==> ",lhost)
