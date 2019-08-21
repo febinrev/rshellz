@@ -2,7 +2,7 @@ import os
 import click
 import socket
 serveo=socket.gethostbyname("serveo.net")
-print(f""" 
+print("""\033[0;36m 
 ███████╗██████╗ 
 ██╔════╝██╔══██╗
 █████╗  ██████╔╝
@@ -11,8 +11,9 @@ print(f"""
 ╚═╝     ╚═╝  ╚═╝
             LINUXPLOIT - FRAMEWORK 
 	       coded by: Febin Rev
+""")
 	      
-(note: IF YOU ARE USING THE PAYLOAD OVER THE INTERNET , USE YOUR PUBLIC IP ADDRESS IF PORT FORWARDING ENABLED 
+print(f"""\033[0;39m (note: IF YOU ARE USING THE PAYLOAD OVER THE INTERNET , USE YOUR PUBLIC IP ADDRESS IF PORT FORWARDING ENABLED 
 TO YOUR ROUTER/PUBLIC IP..........IF YOUR ROUTER/PUBLIC IP DO NOT SUPPORT PORT FORWARDING USE THIS IP IN THE LHOST >>> {serveo}
 OPEN ANOTHER SESSION/TERMINAL AND RUN THE PORTFORWARDING MODULE >>>> python3 portforward.py
 AND ENTER THE SAME PORT ENTERED IN THE LPORT......lport must be above 1024....
@@ -32,7 +33,7 @@ print("")
 output=click.prompt("frsf(output path)#> ", type=str, default=os.path.expanduser("~"))
 print("PAYLOAD PATH ==> ",output)
 print("")
-print("""Available payload modules>>>
+print("""\033[1;34m Available payload modules>>>
  
 [1] linux_debian/reverse_tcp
 [2] linux_arch/reverse_tcp
@@ -57,6 +58,7 @@ Advanced payload modules>>>>
 [16] linux_termux/fake_program/reverse_tcp
 
 """)
+print("\033[1;35 ")
 payload=input("frsf(choose payload)#> ")
 if payload=="1":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
