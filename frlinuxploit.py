@@ -11,8 +11,9 @@ print("""\033[1;35m
 ╚═╝     ╚═╝  ╚═╝
             LINUXPLOIT - FRAMEWORK 
 	       coded by: Febin Rev 
+
 """)
-print("\033[5;34      L-I-N-U-X-P-L-O-I-T ")
+
 	      
 print(f"""\033[1;31m (note: IF YOU ARE USING THE PAYLOAD OVER THE INTERNET , USE YOUR PUBLIC IP ADDRESS IF PORT FORWARDING ENABLED 
 TO YOUR ROUTER/PUBLIC IP..........IF YOUR ROUTER/PUBLIC IP DO NOT SUPPORT PORT FORWARDING USE THIS IP IN THE LHOST >>> {serveo}
