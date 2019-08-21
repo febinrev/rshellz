@@ -13,13 +13,13 @@ print("""\033[0;36m
 	       coded by: Febin Rev
 """)
 	      
-print(f"""\033[0;39m (note: IF YOU ARE USING THE PAYLOAD OVER THE INTERNET , USE YOUR PUBLIC IP ADDRESS IF PORT FORWARDING ENABLED 
+print(f"""\033[1;31m (note: IF YOU ARE USING THE PAYLOAD OVER THE INTERNET , USE YOUR PUBLIC IP ADDRESS IF PORT FORWARDING ENABLED 
 TO YOUR ROUTER/PUBLIC IP..........IF YOUR ROUTER/PUBLIC IP DO NOT SUPPORT PORT FORWARDING USE THIS IP IN THE LHOST >>> {serveo}
 OPEN ANOTHER SESSION/TERMINAL AND RUN THE PORTFORWARDING MODULE >>>> python3 portforward.py
 AND ENTER THE SAME PORT ENTERED IN THE LPORT......lport must be above 1024....
 
-
-""") 
+""")
+print("\033[0;39m ")
 
 lhost=click.prompt("frsf(lhost)#> ", type=str, default=socket.gethostbyname(socket.gethostname()))
 print("LHOST ==> ",lhost)
