@@ -2,7 +2,7 @@ import os
 import click
 import socket
 serveo=socket.gethostbyname("serveo.net")
-print("""\033[0;36m 
+print("""\033[1;35m 
 ███████╗██████╗ 
 ██╔════╝██╔══██╗
 █████╗  ██████╔╝
