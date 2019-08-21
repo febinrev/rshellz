@@ -8,7 +8,7 @@ elif os.path.isfile("//data/data/com.termux/files/usr/bin/frlinuxploit"):
 	os.sytem("rm -rf //data/data/com.termux/files/usr/bin/frlinuxploit")
 else:
   print("........................................................................................................")
-print("""
+print("""\033[1;32 
 ███████╗███████╗██████╗ ██████╗ ███████╗██╗   ██╗                     
 ██╔════╝██╔════╝██╔══██╗██╔══██╗██╔════╝██║   ██║                     
 █████╗  █████╗  ██████╔╝██████╔╝█████╗  ██║   ██║                     
@@ -24,15 +24,15 @@ print("""
 ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝
                                                                       
 """)
-print("For installing dependencies according to Your Operating system.....")
-print("""
+print("\033[5;34 For installing dependencies according to Your Operating system.....")
+print("""\033[1;36 
 [1] kali linux
 [2] parrot os
 [3] black arch
 [4] termux
 
  """)
-ops=int(input("CHOOSE YOUR OS : "))
+ops=int(input("\033[1;32 CHOOSE YOUR OS : "))
 if ops==1:
 	os.system("sudo python3 -m pip install click")
 	os.system("sudo apt-get install nmap > /dev/null")
