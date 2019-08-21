@@ -1,5 +1,5 @@
 # febrev-linuxploit
-febrev-linuxploit is a linux exploitation framework,,,,,,,,,,creates RATs for linux distros
+febrev-linuxploit is a linux exploitation framework,,,,,,,,,,creates RATs/payloads for linux distros
 
 
 usage:
