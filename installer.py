@@ -82,7 +82,7 @@ elif ops==3:
 elif ops==4:
 	os.system("python3 -m pip install click")
 	os.system("apt-get install nmap > /dev/null")
-	os.system("apt-get install ncat > /dev/null") 
+	os.system("apt-get install ncat &> /dev/null") 
 	path=os.getcwd()
 	with open("frlinuxploit.sh","w+") as fr:
 	      fr.write(f"python3 {path}/frlinuxploit.py")
