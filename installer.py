@@ -34,6 +34,7 @@ print("""\033[1;36
  """)
 ops=int(input("\033[1;32 CHOOSE YOUR OS : "))
 if ops==1:
+	os.system("sudo apt-get install python3-pip > /dev/null")
 	os.system("sudo python3 -m pip install click")
 	os.system("sudo apt-get install nmap > /dev/null")
 	os.system("sudo apt-get install ncat > /dev/null") 
@@ -50,6 +51,7 @@ if ops==1:
 	print(" ")
 
 elif ops==2:
+	os.system("sudo apt-get instal python3-pip > /dev/null")
 	os.system("sudo python3 -m pip install click")
 	os.system("sudo apt-get install nmap > /dev/null")
 	os.system("sudo apt-get install ncat > /dev/null") 
@@ -80,6 +82,7 @@ elif ops==3:
 	print(" ")
 	print(" ")
 elif ops==4:
+	os.system("apt-get install python3-pip > /dev/null")
 	os.system("python3 -m pip install click")
 	os.system("apt-get install nmap > /dev/null")
 	os.system("apt-get install ncat &> /dev/null") 
