@@ -36,7 +36,7 @@ print("")
 output=click.prompt("frsf(output path)#> ", type=str, default=os.path.expanduser("~"))
 print("PAYLOAD PATH ==> ",output)
 print("")
-print("""\033[1;34m Available payload modules>>>
+print("""\033[1;34m Available ncat payload modules>>>
  
 [1] linux_debian/reverse_tcp
 [2] linux_arch/reverse_tcp
@@ -51,7 +51,7 @@ print("""\033[1;34m Available payload modules>>>
 
 [L] febrev-listener
 
-Advanced payload modules>>>>
+Advanced ncat payload modules>>>>
 
 [11] linux_debian/fake_downloading/reverse_tcp
 [12] linux_arch/fake_downloading/reverse_tcp
