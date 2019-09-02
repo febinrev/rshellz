@@ -1,5 +1,6 @@
 import os
 import socket
+import click
 os.system("su")
 os.system("apt-get install openssh > /dev/null")
 print("""
