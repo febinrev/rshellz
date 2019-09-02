@@ -3,7 +3,7 @@ import base64
 import click
 import socket
 serveo=socket.gethostbyname("serveo.net")
-localhostrun=socket.gethostbyname("localhost.run")
+ngrok=socket.gethostbyname("ngrok.io")
 print("""\033[1;35m 
 ███████╗██████╗ 
 ██╔════╝██╔══██╗
@@ -18,7 +18,7 @@ print("""\033[1;35m
 
 	      
 print(f"""\033[1;31m (note: IF YOU ARE USING THE PAYLOAD OVER THE INTERNET , USE YOUR PUBLIC IP ADDRESS IF PORT FORWARDING ENABLED 
-TO YOUR ROUTER/PUBLIC IP..........IF YOUR ROUTER/PUBLIC IP DO NOT SUPPORT PORT FORWARDING USE THIS IP IN THE LHOST >>> {serveo}(serveo.net) or {localhostrun}(localhost.run)
+TO YOUR ROUTER/PUBLIC IP..........IF YOUR ROUTER/PUBLIC IP DO NOT SUPPORT PORT FORWARDING USE THIS IP IN THE LHOST >>> {serveo}(serveo.net) or {ngrok}(ngrok)
 OPEN ANOTHER SESSION/TERMINAL AND RUN THE PORTFORWARDING MODULE >>>> python3 portforward.py
 AND ENTER THE SAME PORT ENTERED IN THE LPORT......lport must be above 1024....
 
