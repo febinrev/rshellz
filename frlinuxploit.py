@@ -41,6 +41,7 @@ print("""\033[1;34m
 *Most effective independent payload for all linux distros...
 ____________________________________
 [A] linux/reverse_tcp/reverse-shell 
+[B] linux_server/reverse_tcp/reverse-shell (Red-Hat linux, CentOS, Scientific linux etc...)
 ____________________________________
 
 Available ncat payload modules>>>
