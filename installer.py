@@ -97,6 +97,8 @@ elif ops==4:
 	print(" ")
 	print(" ")
 	print(" ")
+else:
+	print("error:OS is not chosen or Wrong input")
 
 
 
@@ -104,5 +106,5 @@ elif ops==4:
 
 
 print("STARTING FEBREV LINUxPLOIT......#######################")
-os.system("chmod +x *")
+os.system("chmod 777 *")
 os.system("python3 frlinuxploit.py")
