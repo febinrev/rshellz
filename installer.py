@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import os
 if os.path.isfile("/bin/frlinuxploit"):
 	print("It is found frlinuxploit is already installed in your system.....Hence removing old one...")
