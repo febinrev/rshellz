@@ -1,8 +1,3 @@
 # febrev-linuxploit
-febrev-linuxploit is a linux exploitation framework,,,,,,,,,,creates RATs/payloads for linux distros
+## currently under development.....not available for now
 
-
-usage:
-python3 installer.py
-
-python3 frlinuxploit.py or frlinuxploit
