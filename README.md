@@ -28,7 +28,7 @@
 # Available Modules:
 [*] Auxiliary:
 ---------------------------------------------------------------------------------------------------------
-S.no:                |       Auxiliary module               |         Description
+    S.no:                |       Auxiliary module               |         Description
 ---------------------------------------------------------------------------------------------------------
 0)                    auxiliary-enum_ssh_info                  Enumerates Information about SSH 
 1)                    auxiliary-port_scan                      Scans all the ports and detects the service
@@ -37,7 +37,7 @@ S.no:                |       Auxiliary module               |         Descriptio
 
 [*] Payloads:
 ----------------------------------------------------------------------------------------------------------
-S.no:  | payload module                |             Description
+    S.no:  | payload module                |             Description
 ----------------------------------------------------------------------------------------------------------
 3)     payload-binary_shell_reverse_tcp    linux reverse tcp shell binary
 4)     payload-bash_reverse_tcp            Bash reverse tcp shell payload
@@ -53,7 +53,7 @@ S.no:  | payload module                |             Description
 
 Handler:
 ----------------------------------------------------------------------------------------------------------
-S.no:    |    Handler                     |               Description
+    S.no:    |    Handler                     |               Description
 ----------------------------------------------------------------------------------------------------------
 
 13)       tcp_handler                          Handles all the reverse connections
@@ -66,7 +66,7 @@ S.no:    |    Handler                     |               Description
 
 [*] Post Exploitation, Privilege Escalation & Enumeration :
 ----------------------------------------------------------------------------------------------------------
-S.no:     |         Post module               |          Description
+     S.no:     |         Post module               |          Description
 ----------------------------------------------------------------------------------------------------------
 
 14)         post/LinEnum                             Enumerates the informations about local machine
