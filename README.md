@@ -37,18 +37,16 @@
 
 [*] Payloads:
 ----------------------------------------------------------------------------------------------------------
-    S.no:  | payload module                |             Description
-----------------------------------------------------------------------------------------------------------
-3)     payload-binary_shell_reverse_tcp    linux reverse tcp shell binary
-4)     payload-bash_reverse_tcp            Bash reverse tcp shell payload
-5)     payload-perl_reverse_tcp            perl reverse tcp shell payload
-6)     payload-python_reverse_tcp          php reverse tcp shell payload
-7)     payload-php_reverse_tcp             python reverse tcp shell payload
-8)     payload-ruby_reverse_tcp            ruby reverse tcp shell payload
-9)     payload-socat_reverse_tcp           socat reverse tcp shell payload
-10)    payload-netcat_reverse_tcp          netcat reverse tcp shell payload
-11)    payload-lua_reverse_tcp             lua reverse tcp shell payload
-12)    payload-curl_reverse_tcp            spawns a Reverse tcp shell using curl
+    3)     payload-binary_shell_reverse_tcp    linux reverse tcp shell binary
+    4)     payload-bash_reverse_tcp            Bash reverse tcp shell payload
+    5)     payload-perl_reverse_tcp            perl reverse tcp shell payload
+    6)     payload-python_reverse_tcp          php reverse tcp shell payload
+    7)     payload-php_reverse_tcp             python reverse tcp shell payload
+    8)     payload-ruby_reverse_tcp            ruby reverse tcp shell payload
+    9)     payload-socat_reverse_tcp           socat reverse tcp shell payload
+    10)    payload-netcat_reverse_tcp          netcat reverse tcp shell payload
+    11)    payload-lua_reverse_tcp             lua reverse tcp shell payload
+    12)    payload-curl_reverse_tcp            spawns a Reverse tcp shell using curl
 ----------------------------------------------------------------------------------------------------------
 
 Handler:
@@ -56,7 +54,7 @@ Handler:
     S.no:    |    Handler                     |               Description
 ----------------------------------------------------------------------------------------------------------
 
-13)       tcp_handler                          Handles all the reverse connections
+    13)       tcp_handler                          Handles all the reverse connections
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -69,16 +67,16 @@ Handler:
      S.no:     |         Post module               |          Description
 ----------------------------------------------------------------------------------------------------------
 
-14)         post/LinEnum                             Enumerates the informations about local machine
-15)         post/linpeas                             Enumerates the informations of local machine
-16)         post/pspy                                Enumerates the live background processes in the local machine without root privileges
-17)         post/unix-privesc-check                  Unix/Linux privilege escalation checker
-18)         post/linux-exploit-suggester             Linux local exploit suggester
-19)         post/logrotten                           Exploits logrotate process
-20)         post/spawn_shell                         Gives commands to spawn stable tty command-shell
-21)         post/nc_portfwd_pivot                    netcat portforwarding for pivoting
-22)         post/ssh_local_portfwd                   ssh local portforward for pivoting
-23)         post/ssh_remote_portfwd                  ssh remote portforward for pivoting 
+    14)         post/LinEnum                             Enumerates the informations about local machine
+    15)         post/linpeas                             Enumerates the informations of local machine
+    16)         post/pspy                                Enumerates the live background processes in the local machine without root privileges
+    17)         post/unix-privesc-check                  Unix/Linux privilege escalation checker
+    18)         post/linux-exploit-suggester             Linux local exploit suggester
+    19)         post/logrotten                           Exploits logrotate process
+    20)         post/spawn_shell                         Gives commands to spawn stable tty command-shell
+    21)         post/nc_portfwd_pivot                    netcat portforwarding for pivoting
+    22)         post/ssh_local_portfwd                   ssh local portforward for pivoting
+    23)         post/ssh_remote_portfwd                  ssh remote portforward for pivoting 
 
     
     
