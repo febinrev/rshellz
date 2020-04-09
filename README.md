@@ -28,11 +28,9 @@
 # Available Modules:
 [*] Auxiliary:
 ---------------------------------------------------------------------------------------------------------
-    S.no:                |       Auxiliary module               |         Description
----------------------------------------------------------------------------------------------------------
-0)                    auxiliary-enum_ssh_info                  Enumerates Information about SSH 
-1)                    auxiliary-port_scan                      Scans all the ports and detects the service
-2)                    auxiliary-http_banner_grab               grabs HTTP server banner  
+    0)                    auxiliary-enum_ssh_info                  Enumerates Information about SSH 
+    1)                    auxiliary-port_scan                      Scans all the ports and detects the service
+    2)                    auxiliary-http_banner_grab               grabs HTTP server banner  
 
 
 [*] Payloads:
@@ -51,8 +49,6 @@
 
 Handler:
 ----------------------------------------------------------------------------------------------------------
-    S.no:    |    Handler                     |               Description
-----------------------------------------------------------------------------------------------------------
 
     13)       tcp_handler                          Handles all the reverse connections
 
@@ -63,8 +59,6 @@ Handler:
 
 
 [*] Post Exploitation, Privilege Escalation & Enumeration :
-----------------------------------------------------------------------------------------------------------
-     S.no:     |         Post module               |          Description
 ----------------------------------------------------------------------------------------------------------
 
     14)         post/LinEnum                             Enumerates the informations about local machine
