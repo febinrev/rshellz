@@ -287,10 +287,8 @@ S.no:     |         Post module               |          Description
 				except socket.gaierror:
 					print("Can't get the address of RHOST.....")
 			try:	
-					portnum=0
 					s=nmap.PortScanner()
-					while portnum < 65536:
-						portnum=portnum+1
+					for portnum in range(65536):
 						scanned=s.scan(ip,str(portnum))
 						if s[ip]['tcp'][portnum].get('state') == 'open':
 							print("\033[1;32m[!] "+str(portnum) + " is open in "+ ip+" [*] Service : " + s[ip]['tcp'][portnum].get('product')+"  [*] Service version: " + s[ip]['tcp'][portnum].get('version')+" [*] platform : " + s[ip]['tcp'][portnum].get('cpe'))
