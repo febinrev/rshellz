@@ -24,6 +24,8 @@
     exec <command>                                 ----------> to execute an os command
     os <command>                                   ----------> to execute an os command
     quit / exit                                    ----------> to exit from the console
+    whoami / current_user                          ----------> returns Current user
+    sysinfo / systeminfo /machine_info             ----------> returns Info about the Local Machine
     
 # Available Modules:
 [*] Auxiliary:
