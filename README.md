@@ -73,6 +73,8 @@ Handler:
     21)         post/nc_portfwd_pivot                    netcat portforwarding for pivoting
     22)         post/ssh_local_portfwd                   ssh local portforward for pivoting
     23)         post/ssh_remote_portfwd                  ssh remote portforward for pivoting 
+    24)         post/mimipenguin                         extracts Clear text Password of current user from memory(root)
+    25)         post/gather_wifi_creds                   gets wireless credentials saved in the local machine(root)
 
     
     
