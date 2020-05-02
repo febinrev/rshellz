@@ -1,7 +1,0 @@
-#!/usr/bin/python3
-import os
-os.system("python3 -m pip install requests")
-os.system("python3 -m pip install readline")
-os.system("python3 -m pip install netifaces")
-os.system("python3 -m pip install python-nmap")
-os.system("chmod +x *")
