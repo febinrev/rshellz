@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+import os
+os.system("python3 -m pip install requests")
+os.system("python3 -m pip install readline")
+os.system("python3 -m pip install netifaces")
+os.system("python3 -m pip install python-nmap")
+os.system("python3 -m pip install hashlib")
+os.system("python3 -m pip install passlib")
+os.system("python3 -m pip install bs4")
+os.system("chmod +x *")
