@@ -47,6 +47,7 @@
     10)    payload-netcat_reverse_tcp          netcat reverse tcp shell payload
     11)    payload-lua_reverse_tcp             lua reverse tcp shell payload
     12)    payload-curl_reverse_tcp            spawns a Reverse tcp shell using curl
+    13)    payload-telnet_reverse_tcp          spawns a reserse tcp shell using telnet
 ----------------------------------------------------------------------------------------------------------
 
 Handler:
