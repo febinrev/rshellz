@@ -83,7 +83,7 @@ Handler:
 [*] PHP WEB-SHELLS:
 ----------------------------------------------------------------------------------------------------------
 
-    29)         php_webshell                             Simple php webshell
+    29)         php_webshell                             Simple php webshell with password authentication
     30)         php_webshell_gui                         A simple interactive webshell
     31)         webshell_handler                         Handler for simple php webshell which connects and executes commands
     
