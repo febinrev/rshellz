@@ -82,7 +82,7 @@ Handler:
     29)         post/clear_track                         command to clear the tracks in victim machine
    
 [*]SPECIAL REVERSE_SHELL ENCRYPTED:
-    ----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
     30)         openssl_reverse_tcp                      Reverse tcp encrypted shell with openssl
     31)         ssl_listener                             handler for the openssl payload
     
@@ -94,7 +94,7 @@ Handler:
     31)         webshell_handler                         Handler for simple php webshell which connects and executes commands
    
  [*] STRING ENCODERS:
-    ----------------------------------------------------------------------------------------------------------
+ ----------------------------------------------------------------------------------------------------------
     35)         base64_encoder                  Encodes specified string with base64 encoding
     36)         base32_encoder                  Encodes specified string with base32 encoding
     37)         hex_encoder                     Encodes specified string in Hex
