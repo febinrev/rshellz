@@ -5,12 +5,12 @@
 ### It could be more helpful in CTF challenges
 
 # Usage:
-    1. Download and extract febrev-linuxploit
+    1. Download and extract rShellz
     2. Go to the directory
     3. Open Terminal
     4. $ chmod +X *
     5. $ ./installer
-    6. $ ./febrev-linuxploit.py   or python3 febrev-linuxploit.py
+    6. $ ./rShellz.py   or python3 rShellz.py
     7. Linuxploit console will open up
     8. Type   help  to get all available commands and module info
     
