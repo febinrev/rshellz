@@ -1,6 +1,6 @@
-# Febrev-Linuxploit
+# rShellZ
 
-### Febrev-linuxploit is a linux exploitation assistance framework made for Pentesters and Hacking Learners
+### rShellZ is a linux exploitation assistance framework made for Pentesters and Hacking Learners
 ## It is Mainly aimed for educational purposes , learn Pentesting
 ### It could be more helpful in CTF challenges
 
