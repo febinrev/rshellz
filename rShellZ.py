@@ -850,7 +850,7 @@ banner3="""\033[1;34m
 
                            "▀▀▀▀╙"
 
-                        LINUXPLOIT
+                        rShellZ
                                          -----> coded by FEBIN
 	"""
 banner4="""\033[1;35m
